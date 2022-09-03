@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ALjaji.CORP\\Documents\\C#\\Projects\\UtlaggshanteringBundle\\UtlaggshanteringBackendAPI\\UtlaggshanteringBackendAPI.csproj": {}
+    "C:\\Users\\ALjaji.CORP\\Documents\\C#\\Projects\\UtlaggshanteringProjekt\\UtlaggshanteringBackendAPI\\UtlaggshanteringBackendAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ALjaji.CORP\\Documents\\C#\\Projects\\UtlaggshanteringBundle\\UtlaggshanteringBackendAPI\\UtlaggshanteringBackendAPI.csproj": {
+    "C:\\Users\\ALjaji.CORP\\Documents\\C#\\Projects\\UtlaggshanteringProjekt\\UtlaggshanteringBackendAPI\\UtlaggshanteringBackendAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALjaji.CORP\\Documents\\C#\\Projects\\UtlaggshanteringBundle\\UtlaggshanteringBackendAPI\\UtlaggshanteringBackendAPI.csproj",
+        "projectUniqueName": "C:\\Users\\ALjaji.CORP\\Documents\\C#\\Projects\\UtlaggshanteringProjekt\\UtlaggshanteringBackendAPI\\UtlaggshanteringBackendAPI.csproj",
         "projectName": "UtlaggshanteringBackendAPI",
-        "projectPath": "C:\\Users\\ALjaji.CORP\\Documents\\C#\\Projects\\UtlaggshanteringBundle\\UtlaggshanteringBackendAPI\\UtlaggshanteringBackendAPI.csproj",
+        "projectPath": "C:\\Users\\ALjaji.CORP\\Documents\\C#\\Projects\\UtlaggshanteringProjekt\\UtlaggshanteringBackendAPI\\UtlaggshanteringBackendAPI.csproj",
         "packagesPath": "C:\\Users\\ALjaji.CORP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALjaji.CORP\\Documents\\C#\\Projects\\UtlaggshanteringBundle\\UtlaggshanteringBackendAPI\\obj\\",
+        "outputPath": "C:\\Users\\ALjaji.CORP\\Documents\\C#\\Projects\\UtlaggshanteringProjekt\\UtlaggshanteringBackendAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ALjaji.CORP\\AppData\\Roaming\\NuGet\\NuGet.Config",
