@@ -12,7 +12,8 @@ export class HomeComponent implements OnInit {
 
   constructor(private readonly userExpenceService: UserexpenceService) { }
   expenses: any[] = []
-  
+  numberPattern = /^\d+$/;
+
   toggleEdit(expense: UserExpense){
     expense.editable = true;
   }
