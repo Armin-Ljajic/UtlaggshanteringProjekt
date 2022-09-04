@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <div>
+        <div>
+            <input type="text" placeholder="Inköpsställe" [(ngModel)]="userExpense.placeOfPurchase">
+            <input type="text" placeholder="Summa" [(ngModel)]="userExpense.amountIncludingVAT">
+            <input type="text" placeholder="Moms" [(ngModel)]="userExpense.vat">
+        </div>
+        <div>
+            <input type="text" placeholder="Orsak" [(ngModel)]="userExpense.reason">
+            <input type="text" placeholder="Deltagare" [(ngModel)]="userExpense.members">
+            <input type="date" [(ngModel)]="userExpense.date">
+        </div>
+        <div>
+            <textarea name="" id="" cols="80" rows="10" placeholder="Kommentar" [(ngModel)]="userExpense.comment"></textarea>
+        </div>
+        <button (click)="AddExpense()">Lägg till</button>
+    </div>
+</div>

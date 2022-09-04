@@ -1,0 +1,35 @@
+.wrapper>div{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 50vw;
+    margin-top: 10vh;
+    padding: 10px;
+    display:flex;
+    flex-direction: column;
+}
+
+.wrapper>div>div{
+    margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+}
+
+.wrapper>div>div>input{
+    width: 15vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-right: 1vw;
+}
+
+.wrapper>div>button{
+    padding: 1vw;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2vh;
+}
+
+.wrapper>div>div>textarea{
+    resize: none;
+    max-width: 50vw;
+}

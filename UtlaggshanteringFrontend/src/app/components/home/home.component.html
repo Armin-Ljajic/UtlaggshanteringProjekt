@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <div *ngFor="let expense of expenses[0]">
+        <li *ngIf="!expense.editable">
+            <p>Kvitto: {{expense.id}}</p>
+            <p>Deltagare: {{expense.members}}</p>
+            <p>Datum: {{expense.date | date: 'yyyy/MM/dd'}}</p>
+            <p>Inköpsställe: {{expense.placeOfPurchase}}</p>
+            <p>Summa: {{expense.amountIncludingVAT}}</p>
+            <p>Varav moms: {{expense.vat}}</p>
+            <p>Orsak: {{expense.reason}}</p>
+            <p>Kommentarer: {{expense.comment}}</p>
+        </li> 
+        <li *ngIf="expense.editable">
+            <input type="text" [(ngModel)]="expense.members">
+            <input type="date" [(ngModel)]="expense.date">
+            <input type="text" [(ngModel)]="expense.placeOfPurchase">
+            <input type="text" [(ngModel)]="expense.amountIncludingVAT">
+            <input type="text" [(ngModel)]="expense.vat">
+            <input type="text" [(ngModel)]="expense.reason">
+            <input type="text" [(ngModel)]="expense.comment">
+        </li>
+        <button (click)="EditExpense(expense)" *ngIf="expense.editable">Spara</button>
+        <button (click)="toggleEdit(expense)" *ngIf="!expense.editable">Redigera</button>
+        <button (click)="closeEdit(expense)" *ngIf="expense.editable">Stäng</button>
+    </div>
+</div>
+
