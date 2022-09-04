@@ -23,32 +23,7 @@ namespace UtlaggshanteringBackendAPI
             // Services below
             
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Title = "AlumniNetwork API",
-                    Version = "v1",
-                    Description = "More info here",
-                    TermsOfService = new Uri("https://example.com/terms"),
-                    Contact = new OpenApiContact
-                    {
-                        Name = "More Info Here",
-                        Email = "Mail",
-                        Url = new Uri("https://www.noroff.no/accelerate"),
-
-                    },
-                    License = new OpenApiLicense
-                    {
-                        Name = "Use under MIT",
-                        Url = new Uri("https://opensource.org/licenses/MIT"),
-                    }
-                });
-                // Set the comments path for the Swagger JSON and UI.
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                c.IncludeXmlComments(xmlPath);
-            });
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,7 +33,7 @@ namespace UtlaggshanteringBackendAPI
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AlumniNetwork API v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Utlaggshantering API v1"));
             }
 
             app.UseHttpsRedirection();

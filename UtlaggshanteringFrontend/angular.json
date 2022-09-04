@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "UtlaggshanteringApp": {
+    "UtlaggshanteringFrontend": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/utlaggshantering-app",
+            "outputPath": "dist/utlaggshantering-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "UtlaggshanteringApp:build:production"
+              "browserTarget": "UtlaggshanteringFrontend:build:production"
             },
             "development": {
-              "browserTarget": "UtlaggshanteringApp:build:development"
+              "browserTarget": "UtlaggshanteringFrontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "UtlaggshanteringApp:build"
+            "browserTarget": "UtlaggshanteringFrontend:build"
           }
         },
         "test": {
@@ -97,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "231f75ee-3dfe-4ec2-9956-a61911696c3d"
   }
 }
