@@ -5,6 +5,7 @@ namespace Utläggningshantering.Data
 {
     public class DbInitializer
     {
+        //Populate database with predefined values upon starting program
         public static void Seed(ApplicationDbContext context)
         {
             if (!context.UserExpenses.Any())

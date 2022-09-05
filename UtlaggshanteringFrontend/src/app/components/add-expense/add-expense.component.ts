@@ -9,11 +9,16 @@ import { UserexpenceService } from 'src/app/services/userexpence.service';
 })
 export class AddExpenseComponent implements OnInit {
 
+  //Inject service into constructor
   constructor(private readonly userExpenseService: UserexpenceService) { }
 
+  //Object of UserExpense created
   userExpense: UserExpense = {}
+  
+  //Regex pattern
   numberPattern = /^\d+$/;
 
+  //Adds expense to list
   AddExpense(){
     this.userExpenseService.AddExpenseToList(this.userExpense)
     window.location.reload();

@@ -12,17 +12,20 @@ namespace UtlaggshanteringBackendAPI.Controllers
     {
         private readonly ApplicationDbContext _applicationDbContext;
 
+        //Inject application db context in constructor
         public UserExpenseController(ApplicationDbContext applicationDbContext)
         {
             _applicationDbContext = applicationDbContext;
         }
 
+        // Get list of expenses from database
         [HttpGet]
         public async Task<ActionResult<UserExpense>> GetAllUserExpensesAsync()
         {
             return Ok(await _applicationDbContext.UserExpenses.ToListAsync());
         }
 
+        //Add expense to database
         [HttpPost]
         public async Task<ActionResult<UserExpense>> CreateUserExpenseAsync(UserExpense userExpense)
         {
@@ -32,6 +35,7 @@ namespace UtlaggshanteringBackendAPI.Controllers
             return Ok(userExpense);
         }
 
+        //Update expense in database
         [HttpPut]
         public async Task<ActionResult<UserExpense>> UpdateUserExpenseAsync(UserExpense userExpense)
         {

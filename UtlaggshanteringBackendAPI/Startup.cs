@@ -17,12 +17,12 @@ namespace UtlaggshanteringBackendAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            //Set connection string
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             // Services below
-          
-
             services.AddSwaggerGen();
         }
 
@@ -36,6 +36,7 @@ namespace UtlaggshanteringBackendAPI
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Utlaggshantering API v1"));
             }
 
+            //Allow cors and any origin
             app.UseCors(x => x
             .AllowAnyOrigin()
             .AllowAnyMethod()

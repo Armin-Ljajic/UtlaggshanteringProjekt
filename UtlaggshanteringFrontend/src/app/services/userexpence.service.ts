@@ -11,10 +11,12 @@ export class UserexpenceService {
 
   constructor(private readonly http: HttpClient) { }
 
+  //API call to backend to fetch list of UserExpences
   public GetListOfUserExpenses(): Observable<UserExpense[]>{
    return this.http.get<UserExpense[]>('https://localhost:7085/api/UserExpense');
   }
 
+  //API call to add expense to list
   public AddExpenseToList(body: UserExpense){
     this.http.post<any>('https://localhost:7085/api/UserExpense', body, {
       headers: new HttpHeaders({
@@ -23,6 +25,7 @@ export class UserexpenceService {
     }).subscribe()
   }
 
+  //API call to edit expense in list
   EditExpense(body: UserExpense){
     return this.http.put<UserExpense>(`https://localhost:7085/api/UserExpense`, body, {
       headers: new HttpHeaders({

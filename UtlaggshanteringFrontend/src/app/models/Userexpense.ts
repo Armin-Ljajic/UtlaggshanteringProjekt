@@ -1,3 +1,4 @@
+// Interface for UserExpense, added editable variable for extended functionality
 export interface UserExpense{
     id?: number,
     date?: Date,
