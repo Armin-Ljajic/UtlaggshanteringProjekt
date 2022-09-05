@@ -4,8 +4,8 @@ Se och lägg till utlägg
 # Uppstart av applikation
   1. Git Clone <url> 
   2. Öppna UtlaggshanteringBackendAPI.sln
-    - Konfiguera connection-string i appsettings.json
-    - Öppna Package manager console och kör "update-database"
+    2.1 Konfiguera connection-string i appsettings.json
+    2.2 Öppna Package manager console och kör "update-database"
   3. Starta applikationen
   4. Öppna UtlaggshanteringFrontend i förslagsvis Visual Studio Code
   5. Öppna terminal och kör "npm install"
