@@ -6,7 +6,7 @@
 }
 
 .wrapper>form:hover{
-    background-color: antiquewhite;
+    background-color:rgb(234, 234, 240);
 }
 
 .wrapper>form>li{
@@ -16,12 +16,31 @@
 .wrapper>form{
     border: 1px solid black;
     padding:10px;
-    width: 25vw;
-    margin-right: 1vw;
+    max-width: 25vw;
+    margin-right: 2vw;
     margin: 0 auto;
     margin-bottom: 2vh;
     margin-top: 2vh;
     border-radius: 5px;
+    padding: 2vw;
+    
+}
+
+.wrapper>form{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.wrapper>form>button{
+    background-color: rgb(165, 165, 218);
+    color:White;
+    margin-bottom: 1vh;
+    border-radius: 5px;
+}
+
+.wrapper>form>button:hover{
+    background-color: rgb(125, 125, 179);
 }
 
 .edit-list{
@@ -31,12 +50,22 @@
     justify-content: center;
 }
 
-.edit-list>input{
-    width: 15vw;
+.edit-list>div>input{
+    width: 24vw;
     margin-bottom: 2vh;
 }
 
 .error-message{
     color: red;
     font-size: 80%;
+}
+
+.pagination{
+    display:flex;
+    justify-content: center;
+}
+
+textarea{
+    max-width: 25vw;
+    resize: none;
 }

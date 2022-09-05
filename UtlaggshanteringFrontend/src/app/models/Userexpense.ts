@@ -1,11 +1,11 @@
 export interface UserExpense{
     id?: number,
-    date?: Date
+    date?: Date,
     placeOfPurchase?: string,
     amountIncludingVAT?: number,
     vat?: number,
     reason?: string,
     members?: string,
-    comment?: string
-    editable?: boolean
+    comment?: string,
+    editable?: boolean 
 }

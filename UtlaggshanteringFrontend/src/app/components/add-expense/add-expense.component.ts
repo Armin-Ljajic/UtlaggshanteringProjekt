@@ -12,6 +12,7 @@ export class AddExpenseComponent implements OnInit {
   constructor(private readonly userExpenseService: UserexpenceService) { }
 
   userExpense: UserExpense = {}
+  numberPattern = /^\d+$/;
 
   AddExpense(){
     this.userExpenseService.AddExpenseToList(this.userExpense)

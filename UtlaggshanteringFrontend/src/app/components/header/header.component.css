@@ -1,7 +1,7 @@
 .header-wrapper{
-    height: 15vh;
+    height: 12vh;
     width: 100%;
-    background-color: beige;
+    background-color: rgb(92, 110, 209);
 }
 
 .header-wrapper>ul{
@@ -13,6 +13,16 @@
 
 .header-wrapper>ul>li{
     list-style: none;
-    margin-top: 5vh;
-    padding: 1vw;
+    padding-right: 1vw;
+}
+
+.header-wrapper>ul>li>a{
+    color:White;
+}
+
+h1{
+    display:inline-block;
+    display:flex;
+    justify-content: center;
+    color: white;
 }

@@ -13,14 +13,20 @@ export class HomeComponent implements OnInit {
   constructor(private readonly userExpenceService: UserexpenceService) { }
   expenses: any[] = []
   numberPattern = /^\d+$/;
-
+  cp: number = 1;
+  
   toggleEdit(expense: UserExpense){
     expense.editable = true;
+    console.log(expense.editable)
   }
 
   closeEdit(expense: UserExpense){
     expense.editable = false;
     window.location.reload();
+  }
+
+  formatDate(date: string){
+    date.substring(0,10)
   }
 
   GetListOfUserExpenses(): void{

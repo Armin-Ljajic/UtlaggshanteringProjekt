@@ -1,35 +1,52 @@
-.wrapper>div{
+.wrapper>form{
     border: 1px solid black;
     border-radius: 5px;
     margin: 0 auto;
-    width: 50vw;
+    max-width: 80vw;
     margin-top: 10vh;
     padding: 10px;
     display:flex;
     flex-direction: column;
 }
 
-.wrapper>div>div{
+.wrapper>form>div{
     margin: 0 auto;
     display:flex;
     flex-direction: row;
 }
 
-.wrapper>div>div>input{
+.wrapper>form>div>input{
     width: 15vw;
     margin-top: 1vh;
     margin-bottom: 1vh;
     margin-right: 1vw;
+    
 }
 
-.wrapper>div>button{
+.wrapper>form>div>span{
+    display:block;
+    margin-right: 2vw;
+    margin-top: 1vh;
+    
+}
+
+.wrapper>form>button{
     padding: 1vw;
     width: 80%;
     margin: 0 auto;
     margin-top: 2vh;
+    background-color: rgb(165, 165, 218);
+    color:White;
+    margin-bottom: 1vh;
+    border-radius: 5px;
 }
 
-.wrapper>div>div>textarea{
+.wrapper>form>div>textarea{
     resize: none;
     max-width: 50vw;
+}
+
+.error-message{
+    color: red;
+    font-size: 80%;
 }
