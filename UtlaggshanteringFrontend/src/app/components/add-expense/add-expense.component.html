@@ -1,0 +1,28 @@
+<div class="wrapper">
+    <form #form="ngForm" name="form">
+        <div>
+            <input type="text" placeholder="Inköpsställe" [(ngModel)]="userExpense.placeOfPurchase" required #popReq="ngModel" name="popReq">
+            <span class="error-message" *ngIf="popReq?.errors">Fyll i Inköpsställe</span>
+
+            <input type="text" placeholder="Summa" [(ngModel)]="userExpense.amountIncludingVAT" required [pattern]="numberPattern" #amountReq="ngModel" name="amountReq">
+            <span class="error-message" *ngIf="amountReq.errors">Fyll i summa</span>
+
+            <input type="text" placeholder="Moms" [(ngModel)]="userExpense.vat" required [pattern]="numberPattern" #vatReq="ngModel" name="vatReq">
+            <span class="error-message" *ngIf="vatReq.errors">Fyll i moms</span>
+        </div>
+        <div>
+            <input type="text" placeholder="Orsak" [(ngModel)]="userExpense.reason" required #reasonReq="ngModel" name="reasonReq">
+            <span class="error-message" *ngIf="reasonReq.errors">Fyll i orsak</span> 
+
+            <input type="text" placeholder="Deltagare" [(ngModel)]="userExpense.members" required #membersReq="ngModel" name="membersReq">
+            <span class="error-message" *ngIf="membersReq.errors">Fyll i deltagare</span>
+
+            <input type="date" [(ngModel)]="userExpense.date" required #dateReq="ngModel" name="dateReq">
+            <span class="error-message" *ngIf="dateReq.errors">Fyll i datum</span>
+        </div>
+        <div>
+            <textarea name="" id="" cols="80" rows="10" placeholder="Kommentar" [(ngModel)]="userExpense.comment" name="comment"></textarea>
+        </div>
+        <button (click)="AddExpense()" [disabled]="!form.valid">Lägg till</button>
+    </form>
+</div>

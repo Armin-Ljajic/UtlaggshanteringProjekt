@@ -8,6 +8,8 @@ namespace UtlaggshanteringBackendAPI
         public static void Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
+
+            //Run seed on application start
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;

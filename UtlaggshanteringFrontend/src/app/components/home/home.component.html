@@ -1,0 +1,50 @@
+<div class="wrapper">
+    <form *ngFor="let expense of expenses[0] | paginate:{itemsPerPage: 5, currentPage:cp}" #expenseForm="ngForm">
+        <li *ngIf="!expense.editable">
+            <p>Kvitto: {{expense.id}}</p>
+            <p>Deltagare: {{expense.members}}</p>
+            <p>Datum: {{expense.date | date: 'yyyy/MM/dd'}}</p>
+            <p>Inköpsställe: {{expense.placeOfPurchase}}</p>
+            <p>Summa: {{expense.amountIncludingVAT}}</p>
+            <p>Varav moms: {{expense.vat}}</p>
+            <p>Orsak: {{expense.reason}}</p>
+            <p>Kommentarer: {{expense.comment}}</p>
+        </li> 
+        <li class="edit-list" *ngIf="expense.editable == true">
+            <div>
+                <label for="members">Deltagare</label>
+                <input type="text" name="members" [(ngModel)]="expense.members" required #membersReq="ngModel" >
+                <span class="error-message" *ngIf="membersReq.errors">Får ej utesluta namn</span>
+    
+                <label for="date">Datum</label>
+                <input type="date" name="date" [(ngModel)]="expense.date" required #dateReq="ngModel">
+                <span class="error-message" *ngIf="dateReq.errors">Fyll i datum</span>
+    
+                <label for="placeOfPurchase">Inköpsställe</label>
+                <input type="text" name="placeOfPurchase" [(ngModel)]="expense.placeOfPurchase" required #popReq="ngModel">
+                <span class="error-message" *ngIf="popReq.errors">Fyll i Inköpsställe</span>
+    
+                <label for="amountIncludingVAT">Summa</label>
+                <input type="text" name="amountIncludingVAT" [(ngModel)]="expense.amountIncludingVAT" required [pattern]="numberPattern" #aivReq="ngModel">
+                <span class="error-message" *ngIf="aivReq.errors">Fyll i summa</span>
+            </div>
+            <div>
+                <label for="vat">Moms</label>
+                <input type="text" name="vat" [(ngModel)]="expense.vat" required [pattern]="numberPattern" #vatReq="ngModel">
+                <span class="error-message" *ngIf="vatReq.errors">Fyll i moms</span>
+    
+                <label for="reason">Orsak</label>
+                <input type="text" name="reason" [(ngModel)]="expense.reason" required #reasonReq="ngModel">
+                <span class="error-message" *ngIf="reasonReq.errors">Fyll i orsak</span>
+    
+                <label for="comment">Kommentarer</label>
+                <textarea class="textArea-comment"cols="35" rows="10"  type="text" name="comment" [(ngModel)]="expense.comment"></textarea>  
+            </div>
+        </li>
+        <button (click)="toggleEdit(expense)" *ngIf="!expense.editable">Redigera</button>
+        <button (click)="EditExpense(expense)" *ngIf="expense.editable"[disabled]="!expenseForm.valid">Spara</button>
+        <button (click)="closeEdit(expense)" *ngIf="expense.editable">Stäng</button>
+    </form>
+</div>
+<pagination-controls class="pagination" (pageChange)="cp = $event" nextLabel="Nästa" previousLabel="Föregående"></pagination-controls>
+
